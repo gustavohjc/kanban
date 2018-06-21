@@ -13,6 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 app.use(require('./stores/clicks'))
 
 app.route('/', require('./views/main'))
+app.route('/welcome', require('./views/welcome'))
 app.route('/*', require('./views/404'))
 
 module.exports = app.mount('body')
